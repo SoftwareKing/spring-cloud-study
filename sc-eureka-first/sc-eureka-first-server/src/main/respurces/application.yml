@@ -1,0 +1,7 @@
+server:
+  port: 8071
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    
