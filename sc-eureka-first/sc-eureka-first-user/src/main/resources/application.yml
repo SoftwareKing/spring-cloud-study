@@ -9,3 +9,23 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+#增加Spring Boot Info端点信息
+#http://localhost:8010/info    
+info:
+ app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+ java:
+   source: @java.version@
+   target: @java.version@
+   
+ order：
+  orderServiceUrl: http://localhost:8000/
+ 
+ 
+
+      
+ 
+       
+                                                                                     
+                                                         
