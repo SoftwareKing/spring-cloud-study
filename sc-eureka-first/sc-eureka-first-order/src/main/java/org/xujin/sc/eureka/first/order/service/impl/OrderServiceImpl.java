@@ -3,10 +3,12 @@ package org.xujin.sc.eureka.first.order.service.impl;
 import java.util.Date;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 import org.xujin.sc.eureka.first.order.entity.Order;
 import org.xujin.sc.eureka.first.order.model.OrderModel;
 import org.xujin.sc.eureka.first.order.service.OrderService;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 	public OrderModel findOrderByOrderId(Long orderId) {
 		OrderModel orderModel = new OrderModel();

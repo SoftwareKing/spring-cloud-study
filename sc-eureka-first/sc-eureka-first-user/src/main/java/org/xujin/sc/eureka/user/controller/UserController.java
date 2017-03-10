@@ -9,6 +9,7 @@ import org.xujin.sc.eureka.user.model.Order;
 
 @RestController
 public class UserController {
+
 	@Autowired
 	private RestTemplate restTemplate;
 
