@@ -18,9 +18,10 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
-	@GetMapping("/sc/order/{orderId}")
-	public OrderModel findOrderById(@PathVariable Long orderId) {
-		return null;
+	@GetMapping("/sc/order/{id}")
+	public OrderModel findOrderById(@PathVariable Long id) {
+		OrderModel orderModel = orderService.findOrderByOrderId(id);
+		return orderModel;
 	}
 
 }

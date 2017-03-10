@@ -1,4 +1,4 @@
-package org.xujin.sc.eureka.first.order.entity;
+package org.xujin.sc.eureka.user.model;
 
 import java.util.Date;
 

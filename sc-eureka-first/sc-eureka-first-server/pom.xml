@@ -37,7 +37,7 @@
         </dependency>
     </dependencies>
 </dependencyManagement>
-  <!-- 添加spring-boot的maven插件  
+  <!-- 添加spring-boot的maven插件-->
   <build>
     <plugins>
       <plugin>
@@ -46,6 +46,6 @@
       </plugin>
     </plugins>
   </build>
-   -->
+  
 
 </project>

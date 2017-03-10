@@ -1,0 +1,11 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: sc-eureka-first-order
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
