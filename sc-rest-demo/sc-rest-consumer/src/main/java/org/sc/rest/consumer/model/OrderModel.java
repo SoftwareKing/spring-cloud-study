@@ -1,4 +1,4 @@
-package org.sc.rest.consumer.controller.model;
+package org.sc.rest.consumer.model;
 
 import java.util.Date;
 

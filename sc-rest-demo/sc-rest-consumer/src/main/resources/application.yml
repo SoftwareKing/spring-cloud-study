@@ -4,5 +4,3 @@ spring:
   application:
     name: sc-rest-consumer
     
- provider：
-   serviceUrl: http://localhost:8000
