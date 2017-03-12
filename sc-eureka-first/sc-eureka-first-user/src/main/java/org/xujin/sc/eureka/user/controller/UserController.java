@@ -2,6 +2,7 @@ package org.xujin.sc.eureka.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,15 +15,27 @@ public class UserController {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	@Autowired
+	private DiscoveryClient discoveryClient;
+
 	// 从属性文件中读取服务提供的URL
 	@Value("order.orderServiceUrl")
 	private String oderServiceUrl;
 
 	@GetMapping("/user/{id}")
 	public Order findById(@PathVariable Long id) {
-		// this.restTemplate.getForObject("http://localhost:8000/sc/order/" +
-		// id,Order.class)在代码中写死需要调用的URL
-		return this.restTemplate.getForObject(oderServiceUrl + "sc/order/" + id,
+		return this.restTemplate.getForObject("http://localhost:8000/sc/order/" + id,
 				Order.class);
+		// 在代码中写死需要调用的URL
+		/*
+		 * return this.restTemplate.getForObject(oderServiceUrl + "sc/order/" + id,
+		 * Order.class);
+		 */
+	}
+
+	@GetMapping("/sc/user/{id}")
+	public Order findByIdByEurekaServer(@PathVariable Long id) {
+		return this.restTemplate
+				.getForObject("sc-eureka-first-provider" + "sc/order/" + id, Order.class);
 	}
 }

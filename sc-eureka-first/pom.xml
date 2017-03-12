@@ -8,8 +8,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-	  <module>sc-eureka-first-user</module>
-	  <module>sc-eureka-first-server</module>
-          <module>sc-eureka-first-order</module>
+	  <module>sc-eureka-first-privider</module>
+	  <module>sc-eureka-first-consumer</module>
+      <module>sc-eureka-first-server</module>
 	</modules>
 </project>

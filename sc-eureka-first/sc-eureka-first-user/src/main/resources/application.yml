@@ -2,7 +2,7 @@ server:
   port: 8010
 spring:
   application:
-    name: sc-eureka-first-user
+    name: sc-eureka-first-consumer
 eureka:
   client:
     serviceUrl:
@@ -19,8 +19,8 @@ info:
    source: @java.version@
    target: @java.version@
    
- order：
-  orderServiceUrl: http://localhost:8000/
+order:
+ orderServiceUrl: http://localhost:8000/
  
  
 
