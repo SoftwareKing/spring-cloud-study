@@ -1,5 +1,5 @@
 server:
-  port: 80010
+  port: 8000
 spring:
   application:
     name: sc-rest-provider

@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
  *
  */
 @Controller
-@RequestMapping("/sc/rest")
+@RequestMapping("/sc")
 public class ConsumerController {
 
 	@Autowired
