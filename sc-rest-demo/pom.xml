@@ -9,5 +9,6 @@
     <packaging>pom</packaging>
 	<modules>
 		<module>sc-rest-consumer</module>
+		<module>sc-rest-provider</module>
 	</modules>
 </project>
