@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-	  <module>sc-eureka-first-privider</module>
+	  <module>sc-eureka-first-provider</module>
 	  <module>sc-eureka-first-consumer</module>
       <module>sc-eureka-first-server</module>
 	</modules>

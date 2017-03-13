@@ -1,7 +1,10 @@
 package org.xujin.sc.eureka.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,20 +25,25 @@ public class UserController {
 	@Value("order.orderServiceUrl")
 	private String oderServiceUrl;
 
+	public String serviceUrl() {
+		List<ServiceInstance> list = discoveryClient
+				.getInstances("sc-eureka-first-provider");
+		if (list != null && list.size() > 0) {
+			return String.valueOf(list.get(0).getUri());
+		}
+		return null;
+	}
+
 	@GetMapping("/user/{id}")
 	public Order findById(@PathVariable Long id) {
 		return this.restTemplate.getForObject("http://localhost:8000/sc/order/" + id,
 				Order.class);
-		// 在代码中写死需要调用的URL
-		/*
-		 * return this.restTemplate.getForObject(oderServiceUrl + "sc/order/" + id,
-		 * Order.class);
-		 */
 	}
 
 	@GetMapping("/sc/user/{id}")
 	public Order findByIdByEurekaServer(@PathVariable Long id) {
-		return this.restTemplate
-				.getForObject("sc-eureka-first-provider" + "sc/order/" + id, Order.class);
+		String providerServiceUrl = serviceUrl();
+		return this.restTemplate.getForObject(providerServiceUrl + "sc/order/" + id,
+				Order.class);
 	}
 }
