@@ -1,19 +1,18 @@
-package org.xujin.sc.eureka.server;
+package org.sc.eureka.ha.server1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * Eureka Server
+ * 
  * @author xujin
+ *
  */
-@SpringBootApplication
 @EnableEurekaServer
-public class SpringCloudEurekaServer {
-
+@SpringBootApplication
+public class EurekaServerApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudEurekaServer.class, args);
-
+		SpringApplication.run(EurekaServerApplication.class, args);
 	}
 }

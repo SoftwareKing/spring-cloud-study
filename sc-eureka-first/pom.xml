@@ -12,6 +12,5 @@
 	  <module>sc-eureka-first-provider02</module>
 	  <module>sc-eureka-first-consumer</module>
       <module>sc-eureka-first-server-HA01</module>
-      <module>sc-eureka-first-server-HA02</module>
 	</modules>
 </project>
