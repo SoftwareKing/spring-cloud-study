@@ -19,13 +19,14 @@
   </properties>
 
   <dependencies>
+  <!-- 引入Spring Cloud Eureka依赖 -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-eureka-server</artifactId>
     </dependency>
   </dependencies>
-  <!-- 引入spring cloud的依赖 -->
   
+  <!-- 引入spring cloud的依赖 -->
   <dependencyManagement>
     <dependencies>
         <dependency>
@@ -37,6 +38,7 @@
         </dependency>
     </dependencies>
 </dependencyManagement>
+
   <!-- 添加spring-boot的maven插件-->
   <build>
     <plugins>
@@ -46,6 +48,4 @@
       </plugin>
     </plugins>
   </build>
-  
-
 </project>
