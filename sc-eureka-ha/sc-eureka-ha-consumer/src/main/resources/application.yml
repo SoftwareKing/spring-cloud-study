@@ -1,0 +1,31 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: sc-eureka-ha-consumer
+eureka:
+  client:
+    #表示是否将自己注册到Eureka Server上，默认为true，当前应用为Eureka Server所以无需注册
+    registerWithEureka: false 
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+#增加Spring Boot Info端点信息
+#http://localhost:8010/info    
+info:
+ app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+ java:
+   source: @java.version@
+   target: @java.version@
+   
+ 
+ 
+
+      
+ 
+       
+                                                                                     
+                                                         
