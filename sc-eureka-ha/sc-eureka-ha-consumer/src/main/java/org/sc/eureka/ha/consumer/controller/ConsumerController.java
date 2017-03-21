@@ -22,7 +22,7 @@ public class ConsumerController {
 
 	@GetMapping("/consumer/{id}")
 	public OrderModel getOrderInfo(@PathVariable Long id) {
-		return this.restTemplate.getForObject("http://localhost:8000/sc/order/" + id,
+		return this.restTemplate.getForObject("sc-eureka-ha-provider" + "/sc/order/" + id,
 				OrderModel.class);
 
 	}
