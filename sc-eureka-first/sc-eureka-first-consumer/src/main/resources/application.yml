@@ -21,8 +21,7 @@ info:
    source: @java.version@
    target: @java.version@
    
-order:
- orderServiceUrl: http://localhost:8000/
+
  
  
 
