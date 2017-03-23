@@ -3,4 +3,6 @@ server:
 spring:
   application:
     name: sc-rest-consumer
+order:
+   orderServiceUrl: http://localhost:8000/
     
