@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:org.sc.eureka.ScRestConsumerApplication</config>
+		<config>java:org.sc.eureka.EurekaServerApplication</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

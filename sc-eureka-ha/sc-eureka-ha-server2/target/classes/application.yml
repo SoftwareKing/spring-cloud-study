@@ -1,6 +1,6 @@
 spring:
   application:
-    name: sc-eureka-ha-server
+    name: sc-eureka-ha-server2
     
 server:
   port: 8762                    # 指定该Eureka实例的端口
