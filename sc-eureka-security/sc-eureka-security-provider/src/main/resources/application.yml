@@ -1,5 +1,11 @@
 server:
   port: 8000
+ 
 spring:
   application:
-    name: sc-rest-provider
+    name: sc-eureka-security-provider
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xujin:123@localhost:8761/eureka/

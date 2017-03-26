@@ -2,9 +2,9 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.xujin.sc.rest</groupId>
+  <groupId>org.xujin.sc</groupId>
   <artifactId>sc-eureka-security-provider</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>sc-eureka-security-provider</version>
   <name>sc-rest-provider</name>
   <url>http://maven.apache.org</url>
   <!-- 引入spring boot的依赖 -->
@@ -18,15 +18,22 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
   </properties>
-
   <dependencies>
+      <!-- 加入Spring web -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+     
+     <!-- 集成Spring Boot Actuator -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <!-- 加入Spring Cloud Eureka的支持 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-eureka</artifactId>
     </dependency>
     
     <dependency>
@@ -35,9 +42,22 @@
 	    <version>1.16.6</version>
 	    <scope>provided</scope>
     </dependency>
+     
   </dependencies>
-
-  <!-- 添加spring-boot的maven插件 -->
+  <!-- 引入spring cloud的依赖 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Camden.SR4</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+  <!-- 添加spring-boot的maven插件-->
   <build>
     <plugins>
       <plugin>
