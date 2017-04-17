@@ -1,0 +1,8 @@
+1.网关的路由规则
+   说明默认情况下，Zuul会代理所有注册到Eureka Server的微服务，并且Zuul的路由规则如下：
+   http://ZUUL_HOST:ZUUL_PORT/微服务在Eureka上的serviceId/** 会被转发到serviceId对应的微服务。
+   http://localhost:8040/sc-zuul-first-provider/sc/order/2
+2.网关的负载均衡
+   http://localhost:8040/sc-zuul-first-provider/sc/order/2
+   通过网关访问服务提供者，负载均衡打出对应的日志
+

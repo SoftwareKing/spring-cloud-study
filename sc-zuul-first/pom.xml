@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.xujin.sc</groupId>
+    <artifactId>sc-zuul-first</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	<modules>
+		<module>sc-zuul-first-eureka-server</module>
+		<module>sc-zuul-first-zuul</module>
+		<module>sc-zuul-first-provider1</module>
+		<module>sc-zuul-first-provider2</module>
+		<module>sc-zuul-first-consumer</module>
+		<module>sc-zuul-first-hystrix-dashboard</module>
+	</modules>
+</project>
