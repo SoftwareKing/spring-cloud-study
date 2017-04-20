@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>sc-zuul-first-hystrix-dashboard</name>
+	<name>sc-ribbon-first-consumer</name>
 	<comment></comment>
 	<projects>
 	</projects>
