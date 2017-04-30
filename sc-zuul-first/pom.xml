@@ -13,6 +13,7 @@
 		<module>sc-zuul-first-provider1</module>
 		<module>sc-zuul-first-provider2</module>
 		<module>sc-zuul-first-consumer</module>
+		<module>sc-zuul-first-zuul-no-eureka</module>
 		<module>sc-zuul-first-hystrix-dashboard</module>
 	</modules>
 </project>

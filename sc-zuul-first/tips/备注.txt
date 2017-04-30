@@ -10,6 +10,9 @@
  http://localhost:8040/hystrix.stream
 
 4.自定义微服务对外暴露的地址
+ zuul:
+  routes:
+    sc-zuul-first-provider: /order/**
   http://localhost:8040/sc-zuul-first-provider/sc/order/2 
   可以等价于:
   http://localhost:8040/order/sc/order/2
