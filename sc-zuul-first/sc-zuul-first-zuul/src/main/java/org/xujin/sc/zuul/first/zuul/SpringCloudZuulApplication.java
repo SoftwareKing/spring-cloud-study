@@ -1,4 +1,4 @@
-package org.sc.zuul.first.zuul;
+package org.xujin.sc.zuul.first.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
