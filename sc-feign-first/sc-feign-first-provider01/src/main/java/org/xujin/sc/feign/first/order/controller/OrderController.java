@@ -3,6 +3,8 @@ package org.xujin.sc.feign.first.order.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,6 +32,12 @@ public class OrderController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String hello(@RequestParam("name") String name, @RequestParam("age") int age) {
 		return name + age;
+	}
+
+	@PostMapping("/test/post")
+	public OrderModel testpost(@RequestBody OrderModel orderModel) {
+		orderModel.setOrderNo(2222222L);
+		return orderModel;
 	}
 
 }
