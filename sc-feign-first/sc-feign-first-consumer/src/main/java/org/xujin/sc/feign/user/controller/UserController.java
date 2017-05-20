@@ -1,5 +1,8 @@
 package org.xujin.sc.feign.user.controller;
 
+import java.util.Date;
+import java.util.HashMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.xujin.sc.feign.user.model.OrderModel;
 import org.xujin.sc.feign.user.service.UserFeignService;
+
+import com.google.common.collect.Maps;
 
 /**
  * UserController
@@ -40,7 +45,16 @@ public class UserController {
 	}
 
 	@PostMapping("/test/post")
-	public OrderModel testpost(@RequestBody OrderModel orderModel) {
+	public OrderModel testPost(@RequestBody OrderModel orderModel) {
 		return userFeignService.post(orderModel);
+	}
+
+	@GetMapping("/test/get")
+	public String testGet() {
+		HashMap<String, Object> map = Maps.newHashMap();
+		map.put("orderNo", "1");
+		map.put("createTime", new Date());
+		map.put("payTime", new Date());
+		return userFeignService.testGet(map);
 	}
 }

@@ -1,5 +1,7 @@
 package org.xujin.sc.feign.first.order.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,9 +37,14 @@ public class OrderController {
 	}
 
 	@PostMapping("/test/post")
-	public OrderModel testpost(@RequestBody OrderModel orderModel) {
+	public OrderModel testPost(@RequestBody OrderModel orderModel) {
 		orderModel.setOrderNo(2222222L);
 		return orderModel;
+	}
+
+	@RequestMapping(value = "/test/get", method = RequestMethod.GET)
+	public String testGet(@RequestParam Map<String, Object> map) {
+		return String.valueOf(map);
 	}
 
 }

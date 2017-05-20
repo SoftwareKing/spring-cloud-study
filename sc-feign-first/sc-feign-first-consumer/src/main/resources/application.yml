@@ -14,7 +14,7 @@ eureka:
     
 feign:
   httpclient:
-    enabled: false
+    enabled: true
       
 
    
