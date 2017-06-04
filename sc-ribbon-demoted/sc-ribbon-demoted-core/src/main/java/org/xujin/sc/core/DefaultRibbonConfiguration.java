@@ -34,7 +34,7 @@ public class DefaultRibbonConfiguration {
 			return this.propertiesFactory.get(IRule.class, config, name);
 		}
 
-		// 默认配置
+		// LWR 默认配置
 		LabelAndWeightMetadataRule rule = new LabelAndWeightMetadataRule();
 		rule.initWithNiwsConfig(config);
 		return rule;

@@ -17,7 +17,7 @@ import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestVariableDefault;
 
 /**
- * 
+ * 如果使用了拦截器 把标签放在HystrixRequestVariableDefault中
  * @author xujin
  *
  */

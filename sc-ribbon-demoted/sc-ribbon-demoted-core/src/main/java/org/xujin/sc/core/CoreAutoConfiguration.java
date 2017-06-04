@@ -11,8 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 /**
  * 
- * @author xujin
- *
+ * @author xujin DefaultRibbonConfiguration 加载LWR规则
  */
 @Configuration
 @EnableWebMvc
@@ -23,12 +22,14 @@ public class CoreAutoConfiguration extends WebMvcConfigurerAdapter {
 	@Bean
 	public RestTemplate restTemplate() {
 		RestTemplate restTemplate = new RestTemplate();
+		// 把CoreHttpRequestInterceptor，加到restTemplate的拦截器栈里
 		restTemplate.getInterceptors().add(new CoreHttpRequestInterceptor());
 		return restTemplate;
 	}
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
+		// 把CoreHeaderInterceptor加到拦截器栈里
 		registry.addInterceptor(new CoreHeaderInterceptor());
 	}
 }

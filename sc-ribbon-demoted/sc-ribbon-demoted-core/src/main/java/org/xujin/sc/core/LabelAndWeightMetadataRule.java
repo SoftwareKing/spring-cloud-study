@@ -14,7 +14,7 @@ import com.netflix.loadbalancer.ZoneAvoidanceRule;
 import com.netflix.niws.loadbalancer.DiscoveryEnabledServer;
 
 /**
- * 
+ * 继承ZoneAvoidanceRule，添加LWR的规则
  * @author xujin
  *
  */
