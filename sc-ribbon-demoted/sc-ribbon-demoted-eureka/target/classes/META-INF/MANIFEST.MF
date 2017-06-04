@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: sc-ribbon-demoted-eureka
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: xujin
+Implementation-Vendor-Id: org.xujin.sc
+Build-Jdk: 1.8.0_112
+Implementation-URL: http://projects.spring.io/spring-boot/sc-ribbon-de
+ moted/sc-ribbon-demoted-eureka/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
