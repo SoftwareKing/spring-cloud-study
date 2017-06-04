@@ -10,23 +10,25 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * Created by charles on 2017/5/25.
+ * 
+ * @author xujin
+ *
  */
 @Configuration
 @EnableWebMvc
 @RibbonClients(defaultConfiguration = DefaultRibbonConfiguration.class)
 public class CoreAutoConfiguration extends WebMvcConfigurerAdapter {
 
-    @LoadBalanced
-    @Bean
-    public RestTemplate restTemplate() {
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.getInterceptors().add(new CoreHttpRequestInterceptor());
-        return restTemplate;
-    }
+	@LoadBalanced
+	@Bean
+	public RestTemplate restTemplate() {
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.getInterceptors().add(new CoreHttpRequestInterceptor());
+		return restTemplate;
+	}
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new CoreHeaderInterceptor());
-    }
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(new CoreHeaderInterceptor());
+	}
 }

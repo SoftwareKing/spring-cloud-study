@@ -7,19 +7,21 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 /**
- * Created by charles on 2017/5/22.
+ * 
+ * @author xujin
+ *
  */
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableZuulProxy
 public class ZuulApplication {
-    @Bean
-    public PreFilter preFilter() {
-        return new PreFilter();
-    }
+	@Bean
+	public PreFilter preFilter() {
+		return new PreFilter();
+	}
 
-    public static void main(String[] args) {
-        SpringApplication.run(ZuulApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ZuulApplication.class, args);
+	}
 
 }
